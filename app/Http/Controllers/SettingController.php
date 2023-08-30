@@ -12,7 +12,8 @@ class SettingController extends Controller
      */
     public function index()
     {
-        //
+        $settings = Setting::all();
+        return view('admin.setting.index', compact('settings'));
     }
 
     /**
@@ -20,7 +21,7 @@ class SettingController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.setting.create');
     }
 
     /**
@@ -28,7 +29,11 @@ class SettingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            
+        ]);
+        Setting::create($data);
+        return redirect()->route('admin.setting.index')->with('success', 'Configuración creada exitosamente');
     }
 
     /**
@@ -36,7 +41,8 @@ class SettingController extends Controller
      */
     public function show(Setting $setting)
     {
-        //
+        $setting = Setting::findOrfail($setting->id);
+        return view('admin.setting.show', compact('setting'));
     }
 
     /**
@@ -44,7 +50,8 @@ class SettingController extends Controller
      */
     public function edit(Setting $setting)
     {
-        //
+        $setting = Setting::findOrfail($setting->id);
+        return view('admin.setting.edit', compact('setting'));
     }
 
     /**
@@ -52,7 +59,11 @@ class SettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
-        //
+        $data = $request->validate([
+            
+        ]);
+        $setting->update($data);
+        return redirect()->route('admin.setting.index')->with('success', 'Configuración actualizada exitosamente');
     }
 
     /**
@@ -60,6 +71,7 @@ class SettingController extends Controller
      */
     public function destroy(Setting $setting)
     {
-        //
+        $setting->delete();
+        return redirect()->route('admin.setting.index')->with('success', 'Configuración eliminada exitosamente');
     }
 }

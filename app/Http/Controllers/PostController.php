@@ -12,7 +12,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = post::all();
+        return view('admin.post.index', compact('posts'));
     }
 
     /**
@@ -20,7 +21,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.post.create');
     }
 
     /**
@@ -28,7 +29,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+
+        ]);
+        post::create($request->all());
+        return redirect()->route('admin.post.index')->with('success', 'Blog publicado exitosamente');
     }
 
     /**
@@ -36,7 +41,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('admin.post.show', compact('post'));
     }
 
     /**
@@ -44,7 +49,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('admin.post.edit', compact('post'));
     }
 
     /**
@@ -52,7 +57,11 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+
+        ]);
+        $post->update($request->all());
+        return redirect()->route('admin.post.index')->with('success', 'Blog actualizado exitosamente');
     }
 
     /**
@@ -60,6 +69,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect()->route('admin.post.index')->with('success', 'Blog eliminado exitosamente');
     }
 }

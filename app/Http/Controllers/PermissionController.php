@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\permission;
+use App\Models\Permission;
 use Illuminate\Http\Request;
 
 class PermissionController extends Controller
@@ -12,7 +12,8 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        //
+        $permissions = Permission::all();
+        return view('admin.permission.index', compact('permissions'));
     }
 
     /**
@@ -20,7 +21,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.permission.create');
     }
 
     /**
@@ -28,38 +29,47 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+
+        ]);
+        Permission::create($request->all());
+        return redirect()->route('admin.permission.index')->with('success', 'Permiso creado exitosamente');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(permission $permission)
+    public function show(Permission $permission)
     {
-        //
+        return view('admin.permission.show', compact('permission'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(permission $permission)
+    public function edit(Permission $permission)
     {
-        //
+        return view('admin.permission.edit', compact('permission'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, permission $permission)
+    public function update(Request $request, Permission $permission)
     {
-        //
+        $request->validate([
+
+        ]);
+        $permission->update($request->all());
+        return redirect()->route('admin.permission.index')->with('success', 'Permiso actualizado exitosamente');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(permission $permission)
+    public function destroy(Permission $permission)
     {
-        //
+        $permission->delete();
+        return redirect()->route('admin.permission.index')->with('success', 'Permiso eliminado exitosamente');
     }
 }
