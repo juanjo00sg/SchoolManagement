@@ -70,23 +70,11 @@ class SettingSeeder extends Seeder
             [
                 'key' => 'GOOGLE_URL',
                 'value' => 'https://www.google.com/search?q=Instituci%C3%B3n+Educativa+Malter%C3%ADa&stick=H4sIAAAAAAAA_-NgU1I1qLBINTE3MzM3MTVOSko1Mk2yAgpZGliapxmYmBmZJJuZJiYuYlXwzCsuySwpTc48vDlPwTWlNDmxJLMsUcE3Macktejw2kQAs4yarUwAAAA&hl=es-419&mat=CdMw-Ysc3S-QElcBeenfiGrtiKNuiUwiqoy9mgQTgvxB-25KTd_VoywmQz9f216e5MgkmSU49yrAtjhedbSQbGqZ8O_doyXCkO0p3H3JZA0OdY0g1sjrDCgkvqgc1bvKwgI&authuser=0&bshm=rime/1'
-            ],
+            ]/* ,
             [
                 'key' => '',
                 'value' => ''
-            ],
-            [
-                'key' => '',
-                'value' => ''
-            ],
-            [
-                'key' => '',
-                'value' => ''
-            ],
-            [
-                'key' => '',
-                'value' => ''
-            ]
+            ] */
         ];
 
         foreach ($settings as $setting) {

@@ -23,16 +23,16 @@ return new class extends Migration
             $table->string('place_of_birth', 50)->nullable();
             $table->string('father_name', 100)->nullable();
             $table->string('father_document_number', 10)->nullable();
-            $table->string('father_cell_phone', 10)->nullable();
-            $table->string('father_occupation', 50)->nullable();
+            $table->string('father_phone', 10)->nullable();
+            $table->string('father_occupation', 100)->nullable();
             $table->string('mother_name', 50)->nullable();
             $table->string('mother_document_number', 10)->nullable();
-            $table->string('mother_cell_phone', 10)->nullable();
-            $table->string('mother_occupation', 50)->nullable();
+            $table->string('mother_phone', 10)->nullable();
+            $table->string('mother_occupation', 100)->nullable();
             $table->string('guardian_name', 50)->nullable();
             $table->string('guardian_document_number', 10)->nullable();
-            $table->string('guardian_cell_phone', 10)->nullable();
-            $table->string('guardian_occupation', 50)->nullable();
+            $table->string('guardian_phone', 10)->nullable();
+            $table->string('guardian_occupation', 100)->nullable();
             $table->string('address', 100)->nullable();
             $table->string('healthcare_provider', 50)->nullable();;
             $table->enum('blood_type', ['A+', 'B+', 'AB+', 'O+','A-', 'B-', 'AB-', 'O-'])->nullable();
@@ -40,7 +40,7 @@ return new class extends Migration
             $table->string('allergies', 100)->nullable();
             $table->string('medications', 100)->nullable();
             $table->enum('ethnic_group', ['Afro', 'Indigena', 'ROM'])->nullable();
-            $table->enum('status', ['activo', 'inactivo'])->nullable();
+            $table->enum('status', ['activo', 'inactivo']);
 
             $table->foreignId('group_id')->constrained()
                 ->onDelete('cascade')
