@@ -23,31 +23,13 @@ class User extends Authenticatable
         'password',
 
         //CUSTOM
-        'nombres',
-        'apellidos',
-        'celular',
-        'tipo_documento',
-        'numero_documento',
-        'contraseña',
-        'fecha_nacimiento',
-        'lugar_nacimiento',
-        'nombre_padre',
-        'numero_documento_padre',
-        'celular_padre',
-        'ocupacion_padre',
-        'nombre_madre',
-        'numero_documento_madre',
-        'celular_madre',
-        'ocupacion_madre',
-        'eps',
-        'rh',
-        'enfermedades',
-        'alergias',
-        'medicamentos',
-        'grupo_etnico',
-        'estado',
-        'materia',
-        'cargo',
+        'first_names',
+        'last_names',        
+        'document_type',
+        'document_number',        
+        'status',
+        'subject',
+        'position',
     ];
 
     /**
@@ -68,6 +50,26 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
-        'fecha_nacimiento'=> 'date',
+        'date_of_birth' => 'date',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'author_id');
+    }
+
+    public function direccionGrupo()
+    {
+        return $this->hasOne(Group::class, 'professor_id', 'id');
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function measurements()
+    {
+        return $this->hasMany(Measurements::class);
+    }
 }
