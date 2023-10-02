@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -59,5 +60,24 @@ class Student extends Model
     public function group()
     {
         return $this->belongsTo(Group::class);
+    }
+
+    public function age()
+    {        
+        // Obtén la fecha de nacimiento del estudiante.
+        $fechaNacimiento = new Carbon($this->date_of_birth);
+
+        // Calcula la diferencia entre la fecha actual y la fecha de nacimiento.
+        return $fechaNacimiento->diffInYears(Carbon::now());
+    }
+
+    public function measurements()
+    {
+        return $this->hasMany(Measurements::class);
+    }
+
+    public function fullName()
+    {
+        return $this->first_names . ' ' . $this->last_names;
     }
 }

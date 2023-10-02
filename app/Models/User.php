@@ -68,8 +68,8 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
 
-    public function measurements()
+    public function fullName()
     {
-        return $this->hasMany(Measurements::class);
+        return $this->first_names . ' ' . $this->last_names;
     }
 }
