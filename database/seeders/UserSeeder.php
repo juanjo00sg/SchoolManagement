@@ -166,6 +166,18 @@ class UserSeeder extends Seeder
                 'subject'=> 'Inglés',
                 'position'=> 'Profesor',
                 'role_id'=> '4'
+            ],
+            [
+                'email'=> 'admin@email.com',
+                'password'=> 'hola1234',
+                'first_names'=> 'admin',
+                'last_names'=> 'admin',
+                'document_type'=> 'C.C',
+                'document_number'=> '123456789',
+                'status'=> 'activo',
+                'subject'=> '',
+                'position'=> '',
+                'role_id'=> '2'
             ]/* ,
             [
                 'email'=> '',

@@ -70,7 +70,12 @@ class SettingSeeder extends Seeder
             [
                 'key' => 'GOOGLE_URL',
                 'value' => 'https://www.google.com/search?q=Instituci%C3%B3n+Educativa+Malter%C3%ADa&stick=H4sIAAAAAAAA_-NgU1I1qLBINTE3MzM3MTVOSko1Mk2yAgpZGliapxmYmBmZJJuZJiYuYlXwzCsuySwpTc48vDlPwTWlNDmxJLMsUcE3Macktejw2kQAs4yarUwAAAA&hl=es-419&mat=CdMw-Ysc3S-QElcBeenfiGrtiKNuiUwiqoy9mgQTgvxB-25KTd_VoywmQz9f216e5MgkmSU49yrAtjhedbSQbGqZ8O_doyXCkO0p3H3JZA0OdY0g1sjrDCgkvqgc1bvKwgI&authuser=0&bshm=rime/1'
-            ]/* ,
+            ],
+            [
+                'key' => 'GOOGLE_MAPS_URL',
+                'value' => 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15897.66242552363!2d-75.4310521!3d5.0361599!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e47667453bbe25b%3A0x89097f04624c65aa!2sInstituci%C3%B3n%20Educativa%20Malter%C3%ADa!5e0!3m2!1ses-419!2sco!4v1695959456961!5m2!1ses-419!2sco\r\n'
+            ],
+            /* ,
             [
                 'key' => '',
                 'value' => ''

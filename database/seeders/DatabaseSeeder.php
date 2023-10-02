@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(GroupSeeder::class);
+        $this->call(ScheduleSeeder::class);
 
         Post::factory(10)->create();
         Student::factory(50)->create();
