@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\post;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -31,9 +32,17 @@ class PostController extends Controller
     {
         $request->validate([
 
+        ]);        
+        /* $author_id = auth()->user()->id; FIXME: Fix auth for users */ 
+        $author_id = 14;
+        $date = Carbon::now();
+        post::create([
+            'title' => $request->title,
+            'content'=> $request->content,
+            'author_id' => $author_id,
+            'date' => $date,
         ]);
-        post::create($request->all());
-        return redirect()->route('admin.post.index')->with('success', 'Blog publicado exitosamente');
+        return redirect()->route('admin.posts.index')->with('success', 'Blog publicado exitosamente');
     }
 
     /**
@@ -61,7 +70,7 @@ class PostController extends Controller
 
         ]);
         $post->update($request->all());
-        return redirect()->route('admin.post.index')->with('success', 'Blog actualizado exitosamente');
+        return redirect()->route('admin.posts.index')->with('success', 'Blog actualizado exitosamente');
     }
 
     /**
@@ -70,6 +79,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return redirect()->route('admin.post.index')->with('success', 'Blog eliminado exitosamente');
+        return redirect()->route('admin.posts.index')->with('success', 'Blog eliminado exitosamente');
     }
 }

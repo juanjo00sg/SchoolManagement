@@ -33,7 +33,8 @@ class GroupController extends Controller
             
         ]);
         Group::create($request->all());
-        return redirect()->route('admin.group.index')->with('success', 'Grupo creado exitosamente');
+        /* TODO: Organizar la lista de profesores para la direccion de grupo */
+        return redirect()->route('admin.groups.index')->with('success', 'Grupo creado exitosamente');
     }
 
     /**
@@ -61,7 +62,7 @@ class GroupController extends Controller
             
         ]);
         $group->update($request->all());
-        return redirect()->route('admin.group.index')->with('success', 'Grupo actualizado exitosamente');
+        return redirect()->route('admin.groups.index')->with('success', 'Grupo actualizado exitosamente');
     }
 
     /**
@@ -70,6 +71,6 @@ class GroupController extends Controller
     public function destroy(Group $group)
     {
         $group->delete();
-        return redirect()->route('admin.group.index')->with('success', 'Grupo eliminado exitosamente');
+        return redirect()->route('admin.groups.index')->with('success', 'Grupo eliminado exitosamente');
     }
 }

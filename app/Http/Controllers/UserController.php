@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('users.index', compact('users'));
+        return view('admin.user.index', compact('users'));
     }
 
     /**
@@ -21,7 +22,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+        $roles = Role::pluck('name', 'id');
+        return view('admin.user.create', compact('roles'));
     }
 
     /**
@@ -30,10 +32,22 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-          
+
         ]);
-        User::create($request->all());
-        return redirect()->route('users.index')->with('success', 'Usuario creado exitosamente');
+        $role_id = 2; /* FIXME: Fix role from select in create form */
+        User::create([
+            'first_names' => $request->first_names,
+            'last_names' => $request->last_names,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'document_type' => $request->document_type,
+            'document_number' => $request->document_number,
+            'status' => $request->status,
+            'subject' => $request->subject,
+            'position' => $request->position,
+            'role_id' => $role_id
+        ]);
+        return redirect()->route('admin.users.index')->with('success', 'Usuario creado exitosamente');
     }
 
     /**
@@ -41,7 +55,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('users.show', compact('user'));
+        return view('admin.user.show', compact('user'));
     }
 
     /**
@@ -49,7 +63,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('users.edit', compact('user'));
+        $roles = Role::pluck('name', 'id');
+        return view('admin.user.edit', compact('user', 'roles'));
     }
 
     /**
@@ -58,10 +73,10 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $request->validate([
-          
+
         ]);
         $user->update($request->all());
-        return redirect()->route('users.index')->with('success', 'Usuario actualizado exitosamente');
+        return redirect()->route('admin.users.index')->with('success', 'Usuario actualizado exitosamente');
     }
 
     /**
@@ -70,6 +85,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('users.index')->with('success', 'Usuario eliminado exitosamente');
+        return redirect()->route('admin.users.index')->with('success', 'Usuario eliminado exitosamente');
     }
 }

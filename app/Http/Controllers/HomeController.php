@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Schedule;
 use App\Models\Setting;
+use App\Models\User;
+use App\Models\Post;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,7 +29,22 @@ class HomeController extends Controller
     public function index()
     {
         $settings = Setting::pluck('value', 'key');
+        $teachers = User::where('role_id', '4')->get();
+        $staff = User::whereNot('role_id', '4')->get();
 
-        return view('layouts.app', compact('settings'));
+        $today = Carbon::now()->format('Y-m-d');
+        $schedule = Schedule::where('date', '>=', $today)->orderBy('date', 'asc')->get(); 
+        /* $schedule = Schedule::orderBy('date', 'asc')->get();   */
+        
+        $posts = Post::orderBy('created_at', 'desc')->take(3)->get();
+    
+        return view('layouts.main', compact('settings', 'teachers', 'staff', 'schedule', 'posts'));
+    }
+
+    public function login()
+    {
+        $settings = Setting::pluck('value', 'key');
+
+        return view('layouts.admin.main', compact('settings'));
     }
 }

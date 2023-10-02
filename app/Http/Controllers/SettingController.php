@@ -29,11 +29,11 @@ class SettingController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
+        /* $data = $request->validate([
             
-        ]);
-        Setting::create($data);
-        return redirect()->route('admin.setting.index')->with('success', 'Configuración creada exitosamente');
+        ]); */
+        Setting::create($request->all());
+        return redirect()->route('admin.settings.index')->with('success', 'Configuración creada exitosamente');
     }
 
     /**
@@ -63,7 +63,7 @@ class SettingController extends Controller
             
         ]);
         $setting->update($data);
-        return redirect()->route('admin.setting.index')->with('success', 'Configuración actualizada exitosamente');
+        return redirect()->route('admin.settings.index')->with('success', 'Configuración actualizada exitosamente');
     }
 
     /**
@@ -72,6 +72,6 @@ class SettingController extends Controller
     public function destroy(Setting $setting)
     {
         $setting->delete();
-        return redirect()->route('admin.setting.index')->with('success', 'Configuración eliminada exitosamente');
+        return redirect()->route('admin.settings.index')->with('success', 'Configuración eliminada exitosamente');
     }
 }
