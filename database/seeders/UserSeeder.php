@@ -23,7 +23,8 @@ class UserSeeder extends Seeder
                 'document_number'=> '123456789',
                 'status'=> 'activo',
                 'position'=> 'Rectora',
-                'role_id'=> '1'
+                'role_id'=> '1',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'mariela@email.com',
@@ -34,7 +35,8 @@ class UserSeeder extends Seeder
                 'document_number'=> '123456789',
                 'status'=> 'activo',
                 'position'=> 'Secretaria',
-                'role_id'=> '3'
+                'role_id'=> '3',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'diana@',
@@ -45,7 +47,8 @@ class UserSeeder extends Seeder
                 'document_number'=> '123456789',
                 'status'=> 'activo',
                 'position'=> 'Psicoorientadora',
-                'role_id'=> '3'
+                'role_id'=> '3',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'carmenza@email.com',
@@ -57,7 +60,8 @@ class UserSeeder extends Seeder
                 'status'=> 'activo',
                 'subject'=> 'Emprendimiento',
                 'position'=> 'Coordinadora',
-                'role_id'=> '3'
+                'role_id'=> '3',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'augusto@email.com',
@@ -69,7 +73,8 @@ class UserSeeder extends Seeder
                 'status'=> 'activo',
                 'subject'=> 'Música',
                 'position'=> 'Profesor',
-                'role_id'=> '4'
+                'role_id'=> '4',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'marco@emial.com',
@@ -81,7 +86,8 @@ class UserSeeder extends Seeder
                 'status'=> 'activo',
                 'subject'=> 'Educación Física',
                 'position'=> 'Profesor',
-                'role_id'=> '4'
+                'role_id'=> '4',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'carlos@email.com',
@@ -93,7 +99,8 @@ class UserSeeder extends Seeder
                 'status'=> 'activo',
                 'subject'=> 'Matematicas',
                 'position'=> 'Profesor',
-                'role_id'=> '4'
+                'role_id'=> '4',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'mariluz@emial.com',
@@ -105,7 +112,8 @@ class UserSeeder extends Seeder
                 'status'=> 'activo',
                 'subject'=> 'Lenguaje',
                 'position'=> 'Profesor',
-                'role_id'=> '4'
+                'role_id'=> '4',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'diana@email.com',
@@ -117,7 +125,8 @@ class UserSeeder extends Seeder
                 'status'=> 'activo',
                 'subject'=> 'Tecnología',
                 'position'=> 'Profesor',
-                'role_id'=> '4'
+                'role_id'=> '4',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'pedro@email.com',
@@ -129,7 +138,8 @@ class UserSeeder extends Seeder
                 'status'=> 'activo',
                 'subject'=> 'Ciencias Naturales',
                 'position'=> 'Profesor',
-                'role_id'=> '4'
+                'role_id'=> '4',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'german@email.com',
@@ -141,7 +151,8 @@ class UserSeeder extends Seeder
                 'status'=> 'activo',
                 'subject'=> 'Sociales',
                 'position'=> 'Profesor',
-                'role_id'=> '4'
+                'role_id'=> '4',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'dianamarcela@email.com',
@@ -153,7 +164,8 @@ class UserSeeder extends Seeder
                 'status'=> 'activo',
                 'subject'=> 'Ciencias Naturales',
                 'position'=> 'Profesor',
-                'role_id'=> '4'
+                'role_id'=> '4',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'maria@email.com',
@@ -165,7 +177,8 @@ class UserSeeder extends Seeder
                 'status'=> 'activo',
                 'subject'=> 'Inglés',
                 'position'=> 'Profesor',
-                'role_id'=> '4'
+                'role_id'=> '4',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ],
             [
                 'email'=> 'admin@email.com',
@@ -177,7 +190,8 @@ class UserSeeder extends Seeder
                 'status'=> 'activo',
                 'subject'=> '',
                 'position'=> '',
-                'role_id'=> '2'
+                'role_id'=> '2',
+                'message'=> 'Mensaje de parte de cada uno del personal de la institución para la comunidad educativa'
             ]/* ,
             [
                 'email'=> '',
@@ -189,7 +203,8 @@ class UserSeeder extends Seeder
                 'status'=> '',
                 'subject'=> '',
                 'position'=> '',
-                'role_id'=> ''
+                'role_id'=> '',
+                'message'=> ''
             ] */
 
         ];

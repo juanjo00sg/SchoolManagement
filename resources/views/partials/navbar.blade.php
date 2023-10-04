@@ -10,12 +10,12 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            <a class="dropdown-item" href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#Personal">Personal</a>
-            <a class="dropdown-item" href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#Profesores">Profesores</a>
-            <a class="dropdown-item" href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#Agenda">Agenda</a>
-            <a class="dropdown-item" href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#Ubicación">Ubicación</a>
+            <a class="dropdown-item" href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#personal">Personal</a>
+            <a class="dropdown-item" href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#profesores">Profesores</a>
+            <a class="dropdown-item" href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#agenda">Agenda</a>
+            <a class="dropdown-item" href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#ubicación">Ubicación</a>
             <a class="dropdown-item" href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#proyectos">Proyectos</a>
-            <a class="dropdown-item" href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#Blog">Blog</a>
+            <a class="dropdown-item" href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#blog">Blog</a>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">

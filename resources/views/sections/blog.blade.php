@@ -1,4 +1,4 @@
-<section>
+<section id="blog">
     <div class="bg-success-subtle">
         <div class="container p-5">
             <h1 class="text-center">Blog Institucional</h1>

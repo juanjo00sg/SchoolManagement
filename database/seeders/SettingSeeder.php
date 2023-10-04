@@ -49,7 +49,11 @@ class SettingSeeder extends Seeder
             ],
             [
                 'key' => 'LEMA_INSTITUCIONAL',
-                'value' => 'Liderazgo en emprendimiento <br> y desarrollo humano'
+                'value' => 'Liderazgo en emprendimiento y desarrollo humano'
+            ],
+            [
+                'key' => 'LEMA_INSTITUCIONAL2',
+                'value' => 'Trabajemos Juntos Para Fortalecer Nuestro Modelo Escuela Nueva'
             ],
             [
                 'key' => 'HORARIO_INSTITUCIONAL',
@@ -75,6 +79,46 @@ class SettingSeeder extends Seeder
                 'key' => 'GOOGLE_MAPS_URL',
                 'value' => 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15897.66242552363!2d-75.4310521!3d5.0361599!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e47667453bbe25b%3A0x89097f04624c65aa!2sInstituci%C3%B3n%20Educativa%20Malter%C3%ADa!5e0!3m2!1ses-419!2sco!4v1695959456961!5m2!1ses-419!2sco\r\n'
             ],
+            [
+                'key' => 'PROYECTOS_VIDA_NOMBRE',
+                'value' => 'Estilos de vida saludable y proyecto de vida'
+            ],
+            [
+                'key' => 'PROYECTOS_VIDA_DESC',
+                'value' => 'Descripción de cada uno de los proyectos pedagógicos dentro de la institución'
+            ],
+            [
+                'key' => 'PROYECTOS_SEXED_NOMBRE',
+                'value' => 'Educación sexual y construcción de ciudadanía'
+            ],
+            [
+                'key' => 'PROYECTOS_SEXED_DESC',
+                'value' => 'Descripción de cada uno de los proyectos pedagógicos dentro de la institución'
+            ],
+            [
+                'key' => 'PROYECTOS_PAZ_NOMBRE',
+                'value' => 'Educación para el ejercicio de los derechos humanos y la paz, y educación en competencias ciudadanas'
+            ],
+            [
+                'key' => 'PROYECTOS_PAZ_DESC',
+                'value' => 'Descripción de cada uno de los proyectos pedagógicos dentro de la institución'
+            ],
+            [
+                'key' => 'PROYECTOS_AMBIENTE_NOMBRE',
+                'value' => 'Educación en responsabilidad ambiental y gestión del riesgo, y educación en movilidad'
+            ],
+            [
+                'key' => 'PROYECTOS_AMBIENTE_DESC',
+                'value' => 'Descripción de cada uno de los proyectos pedagógicos dentro de la institución'
+            ],
+            [
+                'key' => 'PROYECTOS_FINANZAS_NOMBRE',
+                'value' => 'Educación económica y financiera, y educación en emprendimiento'
+            ],
+            [
+                'key' => 'PROYECTOS_FINANZAS_DESC',
+                'value' => 'Descripción de cada uno de los proyectos pedagógicos dentro de la institución'
+            ]
             /* ,
             [
                 'key' => '',

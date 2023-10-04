@@ -1,4 +1,4 @@
-<section>
+<section id="ubicacion">
     <div class="bg-success-subtle">
         <div class="container p-5">
             <h1 class="text-center pb-5">Ubicación</h1>

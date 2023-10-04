@@ -1,4 +1,4 @@
-<section>
+<section id="profesores">
     <div class="bg-success-subtle">
         <div class="container  p-4">
             <h1 class="text-center">Nuestros Profesores</h1>
@@ -10,7 +10,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $profe->fullName() }}</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">{{ $profe->subject }}</h6>
-                            <p class="card-text">Pequeña reflexión de cada uno</p>
+                            <p class="card-text">{{ $profe->message}}</p>
                         </div>
                     </div>
                 @endforeach

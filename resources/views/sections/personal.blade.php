@@ -1,4 +1,4 @@
-<section>
+<section id="personal">
     <div class="bg-info-subtle">
         <div class="container p-4">
             <h1 class="text-center">Personal</h1>
@@ -10,10 +10,11 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $personal->fullName() }}</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">{{ $personal->position }}</h6>
-                            <p class="card-text">Pequeña reflexión de cada uno </p>
+                            <p class="card-text">{!! $personal->message ?? '' !!}</p>
                         </div>
                     </div>
                 @endforeach
             </div>
         </div>
+    </div>
 </section>

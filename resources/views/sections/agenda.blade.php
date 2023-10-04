@@ -1,4 +1,4 @@
-<section>
+<section id="agenda">
     <div class="bg-info-subtle">
         <div class="container  p-4">
             <h1 class="text-center">Agenda del Mes</h1>

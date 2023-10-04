@@ -45,7 +45,8 @@ class UserController extends Controller
             'status' => $request->status,
             'subject' => $request->subject,
             'position' => $request->position,
-            'role_id' => $role_id
+            'role_id' => $role_id,
+            'message' => $request->message,
         ]);
         return redirect()->route('admin.users.index')->with('success', 'Usuario creado exitosamente');
     }

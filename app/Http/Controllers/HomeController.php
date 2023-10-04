@@ -30,7 +30,7 @@ class HomeController extends Controller
     {
         $settings = Setting::pluck('value', 'key');
         $teachers = User::where('role_id', '4')->get();
-        $staff = User::whereNot('role_id', '4')->get();
+        $staff = User::whereNotIn('role_id', ['4', '2'] )->get();
 
         $today = Carbon::now()->format('Y-m-d');
         $schedule = Schedule::where('date', '>=', $today)->orderBy('date', 'asc')->get(); 
